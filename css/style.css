@@ -1,61 +1,79 @@
 * {
-
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --secondary-color: rgb(163,255,46);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+h2, h4 {
+    color: white;
+    font-weight: bold;
+}
+
+h4, h5 {
+
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h2 ~ h5 {
+
+    text-align: start;
+}
+
+h5, .dv-categories a li {
+
+    color: rgb(104,107,112);
+}
+
+a:visited , a:link {
+
+    text-decoration: none;
+    color: white;
 }
 
 main {
 
     display: flex;
-
 }
 
 
 #discover {
 
     width: 100vw;
-    height: calc(100vh - 80px);
-    
+    height: calc(100vh - 80px);   
 }
 
-.call-a {
+.call-a , .dv-categories {
 
-    width: 100%;
-    height: 80px;
-    background-color: green;
-
-    text-align: right;
+    text-transform: uppercase;
 }
 
-.dv-a {
-
-    width: 100%;
-    height: calc(100vh - 160px);
-    overflow-y: scroll;
-
-    background-color: grey;
-    
-}
 
 footer {
 
     width: 100%;
     height: 80px;
-    background-color: green;
+    background-color: rgb(36,36,36);
 
     position: relative;
-    z-index: 999;
-    
+    z-index: 999;  
 }
-
-
 /******** SIDE-BAR *********/
 
 #side-bar {
 
     position: relative;
-
     width: 400px;
     height: calc(100vh - 80px);
     background-color: black;
@@ -64,62 +82,175 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-
 }
 
-
-
 #side-bar .bottom-sb {
-
     width: 100%;
     background-color: black;
 
     position: absolute;
     bottom: 0px;
     left: 0px;
-    
+   
 }
 
 .playlist {
-
     background-color: red;
     border: 1px solid yellow;
     overflow: auto;
     height: 200px
     max-height: 500px;
-
 }
 
 /******** SIDE-BAR *********/
-
 /******** DISCOVER ************/
 
 #discover .call-a a:visited , .call-a a:link {
 
-    text-transform: uppercase;
     text-decoration: none;
     border: 1px solid white;
     border-radius: 20px;
     padding: 10px 20px;
+    margin-right: 10px;
     line-height: 80px;
     color: white;
-
     
 }
 
+.call-a {
+
+    width: 100%;
+    height: 80px;
+    background-color: rgb(10,14,19);
+    font-size: 10px;
+    text-align: right;
+}
+
+
+.call-a a:hover {
+
+    font-size: 1.2em;
+}
+
+.dv-a {
+
+    width: 100%;
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
+
+    background-color: rgb(20,24,31);
+    padding: 30px;  
+}
+
+.dv-categories {
+
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+}
+
+.dv-categories a:first-child {
+
+  
+    position: relative;
+    z-index: 10;
+}
+
+.dv-categories a:first-child:before {
+
+    content: "";
+    position: absolute; 
+    left:40px;
+    bottom: -5px;
+    width: 30px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+#discover .dv-categories a:hover li {
+
+    color: white;
+}
+
+.albums {
+
+    margin-top: 30px;
+}
+
+.alb-c {
+
+    width: fit-content;
+    margin: 40px 0px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+ 
+}
+
+.alb-c:nth-of-type(3) .alb-ex .img-wrp img, .alb-c:nth-of-type(3) .alb-ex .img-hv {
+
+    border-radius: 50%;
+}
+
+.img-wrp {
+
+    width: 250px;
+    height: 250px;
+
+    position: relative;
+}
+
+.img-wrp img {
+
+    object-fit:cover;
+
+    width: 100%;
+    height: 100%;
+}
+
+.img-hv i {
+
+    position: absolute;
+    top:105px;
+    left:105px;
+    color: white;
+    font-size: 40px;
+}
+
+.img-hv {
+
+    width: 250px;
+    height: 250px;
+    top:0;
+
+    background-color: rgba(6, 6, 6, 0.5);
+    position: absolute;
+    opacity: 0%;
+}
+
+.img-hv:hover {
+
+    opacity: 100%;
+}
+
+.album-link {
+
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    z-index: 10;
+}
+
 /******** DISCOVER **********/
+
 /* RESPONSIVE VERTICAL */
 
 @media screen and (max-height: 500px) {
 
     .playlist {
-
         background-color: orange;
         max-height: 200px;
     }
 }
-
 /* RESPONSIVE VERTICAL */
-
-

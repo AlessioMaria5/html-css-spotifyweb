@@ -8,16 +8,17 @@
 main {
 
     display: flex;
-    position: relative;
+
 }
 
 #side-bar {
 
     width: 400px;
+    height: calc(100vh - 80px);
     background-color: black;
-    overflow-x: hidden;
 
-    padding-bottom: 80px;
+    
+    position: relative;
 
 
 }
@@ -26,6 +27,7 @@ main {
 
     width: 100vw;
     font-size: 40px;
+    height: calc(100vh - 80px);
     
 }
 
@@ -33,8 +35,6 @@ main {
 
     width: 100%;
     height: 80px;
-
-    top: 0px;
     background-color: green;
 
     text-align: right;
@@ -44,10 +44,10 @@ main {
 
     width: 100%;
     height: calc(100vh - 160px);
-
-    overflow: scroll;
+    overflow-y: scroll;
 
     background-color: grey;
+    
 }
 
 footer {
@@ -55,7 +55,57 @@ footer {
     width: 100%;
     height: 80px;
     background-color: green;
+
+    position: relative;
+    z-index: 999;
     
 }
 
-/****************/
+/***************************** SIDE BAR */
+
+#side-bar {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+
+    color: white;
+
+}
+
+
+
+#side-bar .bottom-sb {
+
+    width: 100%;
+    background-color: black;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    
+}
+
+.playlist {
+
+    background-color: red;
+    border: 1px solid yellow;
+    overflow: auto;
+    height: 200px
+    max-height: 500px;
+
+}
+
+
+
+@media screen and (max-height: 500px) {
+
+    .playlist {
+
+        background-color: orange;
+        max-height: 200px;
+    }
+}
+
+

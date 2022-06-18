@@ -64,10 +64,7 @@ footer {
 
     width: 100%;
     height: 80px;
-    background-color: rgb(36,36,36);
-
-    position: relative;
-    z-index: 999;  
+    background-color: rgb(36,36,36); 
 }
 /******** SIDE-BAR *********/
 
@@ -82,6 +79,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: auto;
 }
 
 #side-bar .bottom-sb {
@@ -179,19 +177,22 @@ footer {
 
 .alb-c {
 
-    width: fit-content;
     margin: 40px 0px;
-
     display: flex;
-    flex-direction: row;
-    gap: 20px;
  
 }
 
 .alb-ex {
 
-    width: 100%;
+    width: calc((100% / 6) - 20px);
+    margin-right: 20px;
+
+        /* display: inline-block; bug-altezza */
+
+
+    
 }
+
 
 .alb-c:nth-of-type(3) .alb-ex .img-wrp img, .alb-c:nth-of-type(3) .alb-ex .img-hv {
 
@@ -199,9 +200,6 @@ footer {
 }
 
 .img-wrp {
-
-    width: 250px;
-    height: 250px;
 
     position: relative;
 }
@@ -211,23 +209,23 @@ footer {
     object-fit:cover;
 
     width: 100%;
-    height: 100%;
 }
 
 .img-hv i {
 
     position: absolute;
-    top:105px;
-    left:105px;
+    left: calc( 50% - 15px );
+    top: calc( 50% - 20px );
     color: white;
     font-size: 40px;
 }
 
 .img-hv {
 
-    width: 250px;
-    height: 250px;
     top:0;
+    bottom:0;
+    left:0;
+    right:0;
 
     background-color: rgba(6, 6, 6, 0.5);
     position: absolute;
@@ -239,11 +237,18 @@ footer {
     opacity: 100%;
 }
 
+.album-description {
+
+    width: 100%;
+}
+
 .album-link {
 
     position: absolute;
-    width: 250px;
-    height: 250px;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
     z-index: 10;
 }
 

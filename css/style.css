@@ -188,6 +188,11 @@ footer {
  
 }
 
+.alb-ex {
+
+    width: 100%;
+}
+
 .alb-c:nth-of-type(3) .alb-ex .img-wrp img, .alb-c:nth-of-type(3) .alb-ex .img-hv {
 
     border-radius: 50%;

@@ -5,6 +5,8 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 :root {
     --primary-color: #5f6167;
     --secondary-color: rgb(163,255,46);
@@ -32,7 +34,7 @@ h2 ~ h5 {
     text-align: start;
 }
 
-h5, .dv-categories a li, #side-bar ul li a, #side-bar ul li, .in-sb span, .bottom-sb a:link:nth-of-type(1), .bottom-sb a:visited:nth-of-type(1) {
+h5, .dv-categories li a, #side-bar ul li a, #side-bar ul li, .in-sb span, .bottom-sb a:link:nth-of-type(1), .bottom-sb a:visited:nth-of-type(1) {
 
     color: var(--primary-color);
     fill:currentColor;
@@ -54,7 +56,7 @@ main {
 #discover {
 
     width: 100vw;
-    min-width: 380px;
+    min-width: 320px;
     height: calc(100vh - 100px);   
 }
 
@@ -212,11 +214,12 @@ footer {
 .call-a {
 
     width: 100%;
-    min-width: 200px;
     height: 100px;
     background-color: rgb(10,14,19);
     font-size: 10px;
     text-align: right;
+
+    line-height: 100px;
 }
 
 
@@ -245,14 +248,14 @@ footer {
     flex-wrap: wrap;
 }
 
-.dv-categories a:first-child {
+.dv-categories li:first-child {
 
   
     position: relative;
     z-index: 10;
 }
 
-.dv-categories a:first-child:before {
+.dv-categories li:first-child:before {
 
     content: "";
     position: absolute; 
@@ -262,7 +265,7 @@ footer {
     border-bottom: 2px solid var(--secondary-color);
 }
 
-#discover .dv-categories a:hover li {
+#discover .dv-categories li:hover a {
 
     color: white;
 }
@@ -572,10 +575,16 @@ footer {
     font-size: 15px;
 }
 
-.album-icon-dsp p {
+.album-icon-dsp p a {
 
     font-size: 10px;
     color: var(--primary-color);
+}
+
+.album-icon-dsp p a:hover {
+
+    color: white;
+    text-decoration: underline;
 }
 
 
@@ -658,6 +667,34 @@ footer {
 
 /* RESPONSIVE HORIZONTAL */
 
+@media screen and (max-width:430px) {
+
+    .ft-rgt i:nth-of-type(1), .ft-rgt i:nth-of-type(2) {
+
+        display: none;
+    }
+
+    .ft-rgt {
+
+        display: flex;
+        justify-content: flex-start;
+        min-width: 100px;
+    }
+}
+
+@media screen and (max-width:380px) {
+
+
+    .ft-rgt {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        min-width: 100px;
+        gap: 10px;
+    }
+}
+
 @media screen and (max-width:480px) {
 
     #side-bar {
@@ -684,6 +721,20 @@ footer {
     .bottom-sb {
 
         margin-bottom: 10px;
+    }
+
+    #discover .call-a a:visited , .call-a a:link, .call-a a  {
+
+        background-color: white;
+        color: var(--primary-color);
+
+    }
+
+
+    .call-a {
+
+            text-align: center;
+       
     }
 }
 

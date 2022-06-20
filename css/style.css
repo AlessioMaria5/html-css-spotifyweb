@@ -81,6 +81,7 @@ footer {
     position: relative;
     min-width: 180px;
     height: calc(100vh - 100px);
+    overflow: auto;
     background-color: black;
     color: white;
 
@@ -667,35 +668,39 @@ footer {
 
 /* RESPONSIVE HORIZONTAL */
 
-@media screen and (max-width:430px) {
+@media screen and (max-width: 992px) {
 
-    .ft-rgt i:nth-of-type(1), .ft-rgt i:nth-of-type(2) {
+    .alb-c {
 
-        display: none;
+        flex-wrap: wrap;
+        
     }
 
-    .ft-rgt {
+    .alb-ex {
 
-        display: flex;
-        justify-content: flex-start;
-        min-width: 100px;
+        width: calc(100% / 5);
     }
+
+
 }
 
-@media screen and (max-width:380px) {
+@media screen and (max-width: 768px) {
 
+    .alb-c {
 
-    .ft-rgt {
-
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        min-width: 100px;
-        gap: 10px;
+        flex-wrap: wrap;
+       
     }
+
+    .alb-ex {
+
+        width: calc((100% / 2) - 20px);
+    }
+
+
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:576px) {
 
     #side-bar {
 
@@ -738,34 +743,38 @@ footer {
     }
 }
 
-@media screen and (max-width: 990px) {
 
-    .alb-c {
 
-        flex-wrap: wrap;
-        
+@media screen and (max-width:430px) {
+
+    .ft-rgt i:nth-of-type(1), .ft-rgt i:nth-of-type(2) {
+
+        display: none;
     }
 
-    .alb-ex {
+    .ft-rgt {
 
-        width: calc(100% / 5);
+        display: flex;
+        justify-content: flex-start;
+        min-width: 100px;
     }
-
-
 }
 
-@media screen and (max-width: 500px) {
 
-    .alb-c {
 
-        flex-wrap: wrap;
-       
+@media screen and (max-width:380px) {
+
+
+    .ft-rgt {
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        min-width: 100px;
+        gap: 10px;
     }
-
-    .alb-ex {
-
-        width: calc((100% / 2) - 20px);
-    }
-
-
 }
+
+
+
+

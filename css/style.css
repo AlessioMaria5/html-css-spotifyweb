@@ -112,6 +112,7 @@ footer {
     z-index: 9999;
     bottom: calc(100% - 50px);
     left: calc(50% - 50px);
+    display: none;
 }
 
 .in-mini-circles {
@@ -133,6 +134,7 @@ footer {
     top: 0;
     left: 0;
     animation: start 0.5s;
+
 }
 
 .circles:nth-of-type(1) {

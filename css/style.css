@@ -77,7 +77,7 @@ footer {
 
 /********* LOADING *********/
 
-/* #wrapper {
+ #wrapper {
 
     animation: opc 3s;
 }
@@ -100,7 +100,7 @@ footer {
     }
 
 
-} */
+}
 
 
 .loading {
@@ -108,11 +108,13 @@ footer {
     width: 100px;
     height: 10px;
    
+   
     position: absolute;
     z-index: 9999;
-    bottom: calc(100% - 50px);
+    bottom: calc(50% - 50px);
     left: calc(50% - 50px);
-    display: none;
+    visibility: hidden;
+   
 }
 
 .in-mini-circles {
@@ -191,11 +193,12 @@ footer {
 
 }
 
-@keyframes loading1 {
+ @keyframes loading1 {
 
     0% {
         top: 10px;
         height: 100%;
+        visibility: visible;
         
     }
 
@@ -251,19 +254,19 @@ footer {
 
         top: 0px;
         height: 100%;
-        opacity: 100%;
+       
     }
 
     100% {
 
         top: 10px;
         height: 100%;
-        opacity: 0%;
+
         
     }
 
 
-}
+} 
 
 
 
